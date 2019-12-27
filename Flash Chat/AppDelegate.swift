@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,7 +18,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         //TODO: Initialise and Configure your Firebase here:
+        //setup/configure firebase database
+        //remember that when you first launch your app, first file that gets called is the App.delegate file which is this method we are in (application method) just like the laravel's boot method
         
+        //INTEGRATING FIREBASE INTO OUR ENTIRE APP
+        FirebaseApp.configure()
+        
+//        let myDatabase = Database.database().reference()
+//        //use the set database reference to set a value into it
+//        myDatabase.setValue("We've got NEW data!")
         
         return true
     }
